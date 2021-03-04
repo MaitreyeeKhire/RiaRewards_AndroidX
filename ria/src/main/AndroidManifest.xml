@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pegasusgroup.riarewards">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <application
+        android:name=".application.RiaApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+            android:name=".activity.OfferDetail"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- for map crash in androidX -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".activity.TermsConditions"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.AboutUs"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".stripe.StripePaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.Payment"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.VoucherWebView"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.AddressList"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.Cart"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.CurrentPromotion"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.MyOrders"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.CustomerCard"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.PointHistory"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.AddAddress"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.MyAccount"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.Review"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.ProductDetail" />
+        <activity
+            android:name=".activity.ProductList"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.Categories"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider762522577568407"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <activity android:name=".activity.Map" />
+        <activity android:name=".activity.Favourite" />
+        <activity android:name=".activity.ThankYou" />
+        <activity
+            android:name=".activity.ContactUs"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.Home"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.ForgotPassword" />
+        <activity
+            android:name=".activity.Register2"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.VerificationCode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.Register1"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.Login"
+            android:theme="@style/AppTheme.WhiteActionBar" />
+        <activity
+            android:name=".activity.Splash"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="${applicationId}.braintree" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

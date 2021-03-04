@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+        <!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+    </style>
+
+    <style name="AppTheme.WhiteActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+</resources>

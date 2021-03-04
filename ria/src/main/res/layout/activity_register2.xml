@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Register2">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <include layout="@layout/point_history_view" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/first_time_register"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/choose_a_password_and_enter_your_personal_details_n_denotes_mandatory_fields"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtBirthDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/gray"
+                android:drawableEnd="@drawable/calender"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:hint="@string/date_of_birth"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                tools:ignore="RtlSymmetry" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/txtRiaCustomerNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/edtRiaCustomerNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:hint="@string/ria_customer_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$?';*^%."
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:hint="@string/passwordc"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/txtConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/edtConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$?';*^%."
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:hint="@string/confirm_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/receive_newsletter"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@id/optNewsLetterYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.5"
+                        android:checked="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/yes"
+                        android:textAlignment="textStart" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@id/optNewsLetterNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/no"
+                        android:textAlignment="textStart" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center_vertical"
+                    android:text="@string/gender"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@id/optMale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.33"
+                        android:checked="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/male"
+                        android:textAlignment="textStart" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@id/optFemale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.33"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/female"
+                        android:textAlignment="textStart" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@id/optOther"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.33"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/other"
+                        android:textAlignment="textStart" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/txtTermsConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/accept_to_terms_amp_conditions"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@id/optAccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@id/cmdSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/blue"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/submit"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

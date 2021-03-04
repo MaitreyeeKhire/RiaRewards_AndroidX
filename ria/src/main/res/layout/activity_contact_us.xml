@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ContactUs">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <include layout="@layout/point_history_view" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/contact_us"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/subject_line"
+                android:textColor="@android:color/holo_blue_dark"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/txtHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/edtHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/help"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailSubject"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--            android:text="@string/help"-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/contact_us_message"
+                android:textSize="@dimen/_14sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/name"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--            android:text="Kalpen Vaghela"-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/email"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--            android:text="kalpen@121group.io"-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/message"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/txtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/edtMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/message"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--            android:text="this veryyyyyyyyyyy loooooong test message"-->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@id/cmdSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/blue"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/send"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

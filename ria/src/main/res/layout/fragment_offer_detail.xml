@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.OfferDetail">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.65"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@id/txtProductName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_4sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="3"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@id/txtMemberPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@id/txtPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/imgProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_weight="0.35"
+                    app:srcCompat="@drawable/asos" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtProductDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="@dimen/_8sdp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@id/cmdPayWithDollar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/dark_blue"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/pay_with"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@id/cmdPayWithPoint"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="#4F75BC"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/pay_with_points"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@id/cmdPayWithDollarAndPoint"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="#7FD3F7"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/pay_with_dollar_points"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@id/cmdBuyNow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/dark_blue"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/pay_with"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

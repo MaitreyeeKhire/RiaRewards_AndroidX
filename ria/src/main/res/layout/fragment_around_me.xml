@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.AroundMe">
+
+    <fragment
+        android:id="@id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="FragmentTagUsage">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@id/edtPostcode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/map_search"
+            android:drawableEnd="@android:drawable/ic_menu_search"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/type_postcode_to_search"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColor="@android:color/darker_gray" />
+    </fragment>
+</FrameLayout>

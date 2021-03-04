@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_4sdp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:padding="@dimen/_4sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Electronic | E-Gift Card David Jones | $100"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtMemberPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="$95.00"
+                android:textColor="@color/orange" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtRegularPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/strike_through"
+                android:fontFamily="@font/roboto_regular"
+                android:text="$100.00"
+                android:textColor="@android:color/black"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:gravity="bottom|start"
+                android:orientation="horizontal"
+                android:padding="@dimen/_4sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/txtMinus"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:elevation="@dimen/_8sdp"
+                    app:srcCompat="@drawable/minus" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/txtCounter"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/txtPlus"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:elevation="@dimen/_8sdp"
+                    app:srcCompat="@drawable/plus" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/imgRemove"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/remove" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/imgProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_100sdp"
+                app:srcCompat="@drawable/asos" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

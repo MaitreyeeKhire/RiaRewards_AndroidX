@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_60sdp"
+    android:background="@drawable/point_history_view_border_orange"
+    android:elevation="@dimen/_8sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rtlPointsBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/point_history_view_border_blue"
+        android:padding="@dimen/_12sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/txtPointBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Point Balance"
+            android:textColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/edtPointBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end"
+            android:text="0 Points"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llPointsBalanceWithImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_blue"
+            android:padding="@dimen/_16sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtPointBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtUserName"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/current_points"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/edtSumPointBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtUserName"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_toEndOf="@id/txtPointBalance"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="end"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/imgPointProfile"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/image_border"
+                app:srcCompat="@drawable/profile_image" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="@dimen/_16sdp"
+            android:text="@string/points_history"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_4sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtPointsEarned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/points_earned"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/edtPointsEarned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="end"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_4sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtPointsSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/points_spent"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/edtPointsSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="end"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/txtSeeMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/transaction_history"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

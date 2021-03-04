@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#FF6E01</color>
+    <color name="colorAccent">#FF6E01</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="orange">#FF6E01</color>
+    <color name="light_orange">#FFAE71</color>
+    <color name="cyan">#A7C6E3</color>
+    <!--    <color name="blue">#FF092EE7</color>-->
+    <color name="blue">#0038A5</color>
+    <color name="gray">#EEEEEE</color>
+    <color name="dark_blue">#071A42</color>
+    <color name="dark_gray">@android:color/darker_gray</color>
+
+    <color name="ria_blue">#0038A5</color>
+
+    <color name="black">@android:color/black</color>
+    <color name="white">@android:color/white</color>
+    <color name="facebook">#3F68B2</color>
+</resources>

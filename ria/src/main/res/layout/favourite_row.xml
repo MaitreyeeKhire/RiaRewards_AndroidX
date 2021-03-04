@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardElevation="@dimen/_4sdp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        android:weightSum="1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/imgProduct"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            app:srcCompat="@drawable/asos" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_4sdp"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:maxLines="2"
+                android:text="Electronic | Woolworths Wish Gift Card | $250"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtDetail1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:maxLines="1"
+                android:text="Member Price : $231.25" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtDetail2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:maxLines="1"
+                android:text="RRP : $250.00" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtHighLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="bottom">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/imgFavourite"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentStart="true"
+                    app:srcCompat="@drawable/favourite_selected" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/txtPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/_4sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:padding="@dimen/_4sdp"
+        android:weightSum="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/txtDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:fontFamily="@font/roboto_regular" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/txtPointsAwarded"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/txtReason"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/txtPointBalance"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

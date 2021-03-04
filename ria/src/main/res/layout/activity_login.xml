@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".activity.Login">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <include layout="@layout/point_history_view" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:visibility="visible"
+        tools:ignore="UselessLeaf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="@dimen/_16sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/start_redeeming_your_now"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/register_below"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/login_in_below"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_12sdp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/txtMemberId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@id/edtMemberId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="@string/ria_customer_number_email"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:selectAllOnFocus="true"
+                android:textColor="@android:color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--                android:text="demo_test_ria"-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/white"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$?';*^%."
+                android:fontFamily="@font/roboto_regular"
+                android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@android:color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--                android:text="121"-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@id/cmdSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/blue"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/sign_in"
+            android:textColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@id/chkRememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:checked="true"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/remember_me"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@id/cmdForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/blue"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/forgot_password"
+            android:textColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@id/cmdFirstTimeLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/blue"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/first_time_login"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

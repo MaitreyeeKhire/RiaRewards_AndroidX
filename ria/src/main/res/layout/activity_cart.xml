@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Cart">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <include layout="@layout/point_history_view" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_4sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/my_shopping_cart"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/mycart_item_row" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/shopping_costs"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_4sdp"
+                android:weightSum="1"
+                tools:ignore="DisableBaselineAlignment">
+
+                <LinearLayout
+                    android:id="@id/llRegularPost"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/verification_border"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@id/txtRegularPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="@string/regular_post" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@id/txtRegularPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="$0.00" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/llRegisteredPost"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/registered_post_border"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@id/txtRegisteredPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="@string/registered_post"
+                        android:textColor="@android:color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@id/txtRegisteredPostPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="$5.50"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="@drawable/verification_border"
+                android:padding="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Georgia Lexmond"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/txtAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtName"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="61 Eastern Road, South Melbourne,\n Melbourne, 3205 Australia" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/txtChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_toEndOf="@id/txtName"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="end"
+                    android:text="@string/change"
+                    android:textColor="@color/orange" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/payment_method"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="RelativeOverlap" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="@drawable/verification_border"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/master_card_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:checked="true"
+                    android:gravity="center_vertical" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/master_card"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/master_card_option"
+                    app:srcCompat="@drawable/master_card" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_toEndOf="@id/master_card"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_vertical"
+                    android:text="1249 xxxx xxxx xx09"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/txtChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="end|center_vertical"
+                    android:text="Change"
+                    android:textColor="@color/orange" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="@drawable/verification_border"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/paypal_card_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:checked="false"
+                    android:gravity="center_vertical" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/paypal_card"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/paypal_card_option"
+                    app:srcCompat="@drawable/paypal_card" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/order_summary"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/sub_total" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtSubTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="$95.00"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/shipping_costs" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtShippingCosts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="$5.50"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:padding="@dimen/_4sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/total_price"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtTotalPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="$100.50"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@id/cmdPlaceOrder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/orange"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/place_order"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

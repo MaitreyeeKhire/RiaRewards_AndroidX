@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/menu_home"
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/nav_my_account"
+        android:icon="@drawable/menu_my_account"
+        android:title="@string/menu_my_account" />
+    <item
+        android:id="@+id/nav_points_history"
+        android:icon="@drawable/menn_points"
+        android:title="@string/menu_full_history_points"
+        android:visible="true" />
+    <item
+        android:id="@+id/nav_current_promotion"
+        android:icon="@drawable/menu_current_promotions"
+        android:title="@string/menu_current_promotions" />
+    <item
+        android:id="@+id/nav_reviews"
+        android:icon="@drawable/menu_review"
+        android:title="@string/menu_review" />
+    <item
+        android:id="@+id/nav_categories"
+        android:icon="@drawable/menu_categories"
+        android:title="@string/menu_categories" />
+    <item
+        android:id="@+id/nav_around_me"
+        android:icon="@drawable/menu_around_me"
+        android:title="@string/menu_around_me" />
+    <item
+        android:id="@+id/nav_favourite"
+        android:icon="@drawable/menu_favourite"
+        android:title="@string/menu_favourite"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_my_orders"
+        android:icon="@drawable/menu_my_orders"
+        android:title="@string/menu_my_orders" />
+    <item
+        android:id="@+id/nav_my_cart"
+        android:icon="@drawable/menu_my_cart"
+        android:title="@string/menu_my_cart"
+        app:actionLayout="@layout/menu_counter" />
+    <item
+        android:id="@+id/nav_customer_card"
+        android:icon="@drawable/menu_customer_card"
+        android:title="@string/menu_customer_card"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_contact"
+        android:icon="@drawable/menu_contact"
+        android:title="@string/menu_contact" />
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/menu_about"
+        android:title="@string/menu_about_us" />
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/menu_logout"
+        android:title="@string/menu_logout" />
+
+</menu>

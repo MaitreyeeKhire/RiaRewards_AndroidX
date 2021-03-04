@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 'android-S'
+    buildToolsVersion '30.0.3'
+    defaultConfig {
+        applicationId "com.pegasusgroup.riarewards"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+//    implementation 'org.greenrobot:eventbus:3.1.1'
+    /* Needed for RxAndroid */
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.3.8'
+    implementation 'com.stripe:stripe-android:16.3.0'
+
+    // Finger ID
+    implementation 'androidx.biometric:biometric:1.1.0'
+
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    // Network
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.9.0'
+    implementation('com.squareup.retrofit2:retrofit:2.9.0') {
+        // exclude Retrofitâ€™s OkHttp dependency module and define your own module import
+        exclude module: 'okhttp'
+    }
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'com.facebook.android:facebook-share:5.15.0'
+    implementation 'com.google.zxing:core:3.4.1'
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0@aar'
+
+    // Brain Tree
+    implementation 'com.braintreepayments.api:drop-in:5.1.0'
+    implementation 'com.braintreepayments.api:braintree:3.16.1'
+    implementation 'com.braintreepayments.api:data-collector:3.16.1'
+}

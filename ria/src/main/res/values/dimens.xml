@@ -1,0 +1,19 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+
+    <dimen name="button_height">@dimen/_32sdp</dimen>
+    <!--    <dimen name="recycler_view_height">@dimen/_130sdp</dimen>-->
+    <!--    <dimen name="category_recycler_view_height">@dimen/_150sdp</dimen>-->
+    <!--    <dimen name="cash_back_recycler_view_height">@dimen/_150sdp</dimen>-->
+    <!--    <dimen name="home_life_style_recycler_view_height">@dimen/_150sdp</dimen>-->
+    <!--    <dimen name="movie_ticket_recycler_view_height">@dimen/_150sdp</dimen>-->
+    <!--    <dimen name="browser_category_row_height">@dimen/_125sdp</dimen>-->
+    <!--    <dimen name="recommended_row_height">@dimen/_225sdp</dimen>-->
+    <!--    <dimen name="recommended_row_width">@dimen/_120sdp</dimen>-->
+    <!--    <dimen name="recommended_recycler_view_height">@dimen/_230sdp</dimen>-->
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/imgPromotion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/txtPoints"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/point_border"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="200 \nPoints"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/txtSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="Your first online money transfer free!"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/txtDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@id/cmdViewEarn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@color/dark_blue"
+            android:elevation="@dimen/_4sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="@dimen/_4sdp"
+            android:text="@string/view_amp_earn"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <com.facebook.share.widget.ShareButton
+            android:id="@+id/cmdShareEarn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@color/facebook"
+            android:clickable="true"
+            android:elevation="@dimen/_4sdp"
+            android:focusable="true"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/share_amp_earn"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cmdViewEarn1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@color/orange"
+            android:elevation="@dimen/_4sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="@dimen/_4sdp"
+            android:text="@string/view_amp_earn"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

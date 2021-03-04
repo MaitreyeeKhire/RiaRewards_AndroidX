@@ -1,0 +1,2 @@
+include ':ria'
+rootProject.name='Ria Rewards'

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.VerificationCode">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_layout" />
+
+    <include layout="@layout/point_history_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_16sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="@string/first_time_register"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="@string/please_type_the_verification_code_send_to"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/txtMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/verification_border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editText1"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="7dp"
+                android:layout_height="1dp"
+                android:background="@android:color/transparent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editText2"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="7dp"
+                android:layout_height="1dp"
+                android:background="@android:color/transparent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editText3"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="7dp"
+                android:layout_height="1dp"
+                android:background="@android:color/transparent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editText4"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="7dp"
+                android:layout_height="1dp"
+                android:background="@android:color/transparent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editText5"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="7dp"
+                android:layout_height="1dp"
+                android:background="@android:color/transparent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editText6"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtResend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/roboto_regular"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="@string/resend_code"
+            android:textSize="@dimen/_12sdp"
+            tools:ignore="UnusedAttribute" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@id/cmdVerificationCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:background="@color/blue"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/confirm"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
